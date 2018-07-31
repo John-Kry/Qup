@@ -14,6 +14,9 @@ io.on('connection', function(socket){
     socket.on("client-message", function(msg){
         io.emit("chat message",msg);
     })
+    socket.on("songUpdate", function(msg){
+      io.emit("songUpdateServer", msg);
+    })
   });
 
 http.listen(process.env.PORT, function(){

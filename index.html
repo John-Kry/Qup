@@ -23,9 +23,15 @@
         $('#m').val('');
         return false;
       });
+      socket.on('songUpdateServer', function(msg){
+          $('currentSong').text = msg;
+      }
+    
+    )
     });
   </script>
     <body>
+        <div id ="currentSong">NULL</div>
     <ul id="messages"></ul>
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
