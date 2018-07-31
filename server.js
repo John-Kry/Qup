@@ -19,7 +19,8 @@ io.on('connection', function(socket){
       io.emit("songUpdateServer", msg);
     })
   });
-
-http.listen(process.env.PORT, function(){
+let port = process.env.PORT ||3000;
+http.listen(port, function(){
   console.log('listening on *:3000');
 });
+console.log(port);
