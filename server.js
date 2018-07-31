@@ -15,6 +15,7 @@ io.on('connection', function(socket){
         io.emit("chat message",msg);
     })
     socket.on("songUpdate", function(msg){
+      console.log("songUpdateServer" + msg);
       io.emit("songUpdateServer", msg);
     })
   });

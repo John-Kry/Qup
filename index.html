@@ -25,6 +25,7 @@
       });
       socket.on('songUpdateServer', function(msg){
           $('currentSong').text = msg;
+          console.log(msg);
       }
     
     )
