@@ -25,7 +25,7 @@
         return false;
       });
       socket.on('songUpdateServer', function(msg){
-          $('#currentSong').text = msg;
+          $('#currentSong').val = msg;
           console.log(msg);
       }
     
@@ -34,7 +34,7 @@
   </script>
     <body>
         <center>
-            <div id ="currentSong">NULL</div>
+            <div><ul id ="currentSong"></ul>NULL</div>
         </center>
     <ul id="messages"></ul>
     <form action="">
